@@ -4,7 +4,8 @@ const btnNum = document.querySelector('#btn-num')
 const divContAcum = document.querySelector('#div-cont-acum')
 
 let contador = 0
-let acum = 0.0
+
+
 btnNum.addEventListener('click', (evt)=>{
     let numDigitado = Number(inputNum.value)
 
