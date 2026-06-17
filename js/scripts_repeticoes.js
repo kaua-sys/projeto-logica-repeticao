@@ -41,4 +41,8 @@ btnFrase.addEventListener('click', (evt)=>{
     }
 })
 
-//For in
+//Coleção de dados - Array
+const presentes = ['Bicicleta', 'Celular','Camisa do Mengão', 'Doleira', 'Tênis Adidas']
+
+const divArray = document.querySelector('#div-Array')
+//for in
