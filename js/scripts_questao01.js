@@ -1,20 +1,13 @@
 //Contador/Acumulador
-const inputNum = document.querySelector('#num')
-const btnNum = document.querySelector('#btn-num')
-const divContAcum = document.querySelector('#div-cont-acum')
+const divContAcum = document.querySelector('#div-cont-acum');
 
-let contador = 0
+let contador
+let quantidade = 0
 
+for(contador = 1; contador < 1000; contador++ ) {
+    if (contador % 7 === 0) {
+        quantidade ++;
 
-btnNum.addEventListener('click', (evt)=>{
-    let numDigitado = Number(inputNum.value)
-
-    cont ++
-    acum += numDigitado
-
-    divContAcum.innerHTML = `Total de Número Digitado é: ${cont} <br>
-    A Soma dos Número é: ${acum}`
-    
-    inputNum.value = ''
-
-})
+        divContAcum.innerHTML += `${contador} <br>`;
+    }
+}
