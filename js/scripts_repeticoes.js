@@ -45,4 +45,26 @@ btnFrase.addEventListener('click', (evt)=>{
 const presentes = ['Bicicleta', 'Celular','Camisa do Mengão', 'Doleira', 'Tênis Adidas']
 
 const divArray = document.querySelector('#div-Array')
+for(i=0;i<5;i++){
+divArray.innerHTML += `${presentes[i]} <br>`
+}
 //for in
+const divForIn = document.querySelector('#div-forIn')
+
+for(let posicao in presentes) {
+    divForIn.innerHTML += `${presentes[posicao]} <br>`
+}
+
+//for of
+const divForOf = document.querySelector("#div-forOf")
+
+for (let elemento of presentes) {
+    divForOf.innerHTML += `${elemento} <br>`
+}
+
+//for each
+const divForEach = document.querySelector('#div-forEach')
+
+presentes. forEach((elemento,posicao)=>{
+    divForEach.innerHTML += `${posicao} - ${elemento} <br>`
+})
