@@ -25,3 +25,20 @@ btnNum.addEventListener('click', (evt)=>{
     inputNum.value = ''
 
 })
+
+//Controlando for
+const inputFrase = document.querySelector('#frase')
+const inputNumRepeticao = document.querySelector('#num-repeticao')
+const btnFrase = document.querySelector('#btn-frase')
+const divFrase = document.querySelector('#div-frase')
+
+btnFrase.addEventListener('click', (evt)=>{
+    let numDigi = Number(inputNumRepeticao.value)
+    let frase = inputFrase.value 
+    
+    for (i = 0; i < numDigi; i++) {
+        divFrase.innerHTML += `${i + 1} - ${frase} <br>`
+    }
+})
+
+//For in
