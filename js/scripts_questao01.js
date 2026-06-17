@@ -1,13 +1,15 @@
-//Contador/Acumulador
-const divContAcum = document.querySelector('#div-cont-acum');
+const divFor = document.querySelector('#div-for');
 
-let contador
-let quantidade = 0
+let quantidade = 0;
 
-for(contador = 1; contador < 1000; contador++ ) {
+for (let contador = 1; contador <= 1000; contador++) {
+
     if (contador % 7 === 0) {
-        quantidade ++;
+        quantidade++;
 
-        divContAcum.innerHTML += `${contador} <br>`;
+        divFor.innerHTML += `${contador}<br>`;
     }
 }
+
+divFor.innerHTML += `<hr>
+Quantidade de números divisíveis por 7: ${quantidade}`;
