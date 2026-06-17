@@ -68,3 +68,18 @@ const divForEach = document.querySelector('#div-forEach')
 presentes. forEach((elemento,posicao)=>{
     divForEach.innerHTML += `${posicao} - ${elemento} <br>`
 })
+
+const pessoas =[
+    {nome: 'Maria Flor', idade: 25, renda:8500},
+    {nome: 'Joerdson Souza', idade: 75, renda:5000},
+    {nome: 'Taoca', idade: 28, renda:500},
+    {nome: 'Chicó', idade: 36, renda:100},
+    {nome: 'João Grilo', idade: 32, renda:100},
+]
+
+//Listando objeto literaral pelo for
+const divListaObjFor = document.querySelector('#div-listaobj-for')
+
+for(i = 0; i < pessoas.length; i++) {
+    divListaObjFor.innerHTML += `${pessoas[i].nome}, ${pessoas[i].idade} R$ ${pessoas[i].renda.toFixed(2).replace('.',',')} <br>`
+}
