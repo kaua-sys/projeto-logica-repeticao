@@ -1,15 +1,21 @@
-const divFor = document.querySelector('#div-for');
+const inputNum = document.querySelector('#num');
+const btnEnviar = document.querySelector('button');
+const divCont = document.querySelector('#div-cont-acum');
 
-let quantidade = 0;
+btnEnviar.addEventListener('click', () => {
+    const numero = Number(inputNum.value);
 
-for (let contador = 1; contador <= 1000; contador++) {
+    divCont.innerHTML = '';
 
-    if (contador % 7 === 0) {
-        quantidade++;
+    for (let contador = 1; contador <= numero; contador++) {
 
-        divFor.innerHTML += `${contador}<br>`;
+        if (numero % contador === 0) {
+            divCont.innerHTML += `${contador}<br>`;
+        }
+
     }
-}
 
-divFor.innerHTML += `<hr>
-Quantidade de números divisíveis por 7: ${quantidade}`;
+    divCont.innerHTML += `<hr>
+    Os divisores de ${numero} são os números acima.`;
+
+});

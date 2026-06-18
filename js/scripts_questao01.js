@@ -1,15 +1,16 @@
-const divFor = document.querySelector('#div-for');
+const divNum = document.querySelector('#div-num');
 
 let quantidade = 0;
+let divisores
 
 for (let contador = 1; contador <= 1000; contador++) {
 
-    if (contador % 7 === 0) {
+    if (contador % divisores === 0) {
         quantidade++;
 
-        divFor.innerHTML += `${contador}<br>`;
+        divNum.innerHTML += `${contador}<br>`;
     }
 }
 
 divFor.innerHTML += `<hr>
-Quantidade de números divisíveis por 7: ${quantidade}`;
+Quantidade de números divisíveis por 7: ${divisores}`;
