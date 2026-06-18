@@ -99,6 +99,9 @@ pessoas.splice(2,2)
 //Excluir o Último elemento do Array
 pessoas.pop()
 
+//Exibir a quantidade de elementos em um array
+console.log('Total de elementos na array pessoas ====> ' + pessoas.length)
+
 //Listando objeto literaral pelo for
 const divListaObjFor = document.querySelector('#div-listaobj-for')
 
