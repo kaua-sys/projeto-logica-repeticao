@@ -98,5 +98,12 @@ let contForOf = 0
 for(let elem of pessoas) {
     contForOf++
 
-    divListaObjForOf.innerHTML += `${elem.nome}, ${elem.idade}, R$ ${elem.renda.toFixed(2).replace('.',',')} <br>`
+    divListaObjForOf.innerHTML += `${contForOf} - ${elem.nome}, ${elem.idade}, R$ ${elem.renda.toFixed(2).replace('.',',')} <br>`
 }
+
+//Lista objeto literal pelo for each
+const divListaObjForEach = document.querySelector('#div-listaobj-foreach')
+
+pessoas.forEach((elem,i)=>{
+    divListaObjForEach.innerHTML += `${i} - ${elem.nome}, ${elem.idade} R$ ${elem.renda.toFixed(2).replace('.',',')} <br>`
+})
