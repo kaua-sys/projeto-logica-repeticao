@@ -43,6 +43,7 @@ btnFrase.addEventListener('click', (evt)=>{
 
 //Coleção de dados - Array
 const presentes = ['Bicicleta', 'Celular','Camisa do Mengão', 'Doleira', 'Tênis Adidas']
+presentes.push('Pedra')
 
 const divArray = document.querySelector('#div-Array')
 for(i=0;i<5;i++){
@@ -76,6 +77,27 @@ const pessoas =[
     {nome: 'Chicó', idade: 36, renda:100},
     {nome: 'João Grilo', idade: 32, renda:100},
 ]
+
+//Manipulando Array
+//Adicionar elementos no array
+pessoas.push({nome: 'Magnólia', idade: 32, renda: 3500})
+pessoas.unshift({nome: 'Joerdison', idade: 36, renda: 100000})
+
+//Splice para adicionar em uma posição sem excluir um elemento
+pessoas.splice(1,0,{nome: 'Extraterrestre', idade: 250,
+renda: 0.50})
+
+//Splice para adicionar em uma posição excluindo elementos
+pessoas.splice(1,3,{nome: 'Vini jr', idade: 22, renda: 2222})
+
+//Splice Exclui uma posição e nesse exemplo exclui apenas o elemento da posição(Indíce) informada
+pessoas.splice(1,0)
+
+//Splice exclui dois elementos a partir da posição(Indíce)informada
+pessoas.splice(2,2)
+
+//Excluir o Último elemento do Array
+pessoas.pop()
 
 //Listando objeto literaral pelo for
 const divListaObjFor = document.querySelector('#div-listaobj-for')
