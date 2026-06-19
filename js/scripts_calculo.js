@@ -18,3 +18,5 @@ const calculoPercentual = (valor) => {
 }
 
 console.log(calculoPercentual(900))
+
+export {calculoPercentual}
